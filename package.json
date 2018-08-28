@@ -10,11 +10,16 @@
   "author": "devin.huang",
   "license": "ISC",
   "dependencies": {
+    "es6-promise": "^4.2.4",
     "react": "^16.4.2",
     "react-addons-perf": "^15.4.2",
     "react-addons-pure-render-mixin": "^15.6.2",
     "react-dom": "^16.4.2",
-    "react-router": "^4.3.1"
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "whatwg-fetch": "^2.0.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

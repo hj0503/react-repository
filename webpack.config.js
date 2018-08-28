@@ -10,6 +10,9 @@ module.exports = {
     path: path.join(__dirname, '/dist'),
     filename: 'bundle.js'
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   module: {
     // 使用 babel-loader 编译 es6/7/8 和 jsx 语法
     // 注意：这里没有配置 preset，而是在 .babelrc 文件里面配置
