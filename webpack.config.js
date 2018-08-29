@@ -18,7 +18,7 @@ module.exports = {
     // 注意：这里没有配置 preset，而是在 .babelrc 文件里面配置
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx)?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
