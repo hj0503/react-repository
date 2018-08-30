@@ -31,7 +31,7 @@ module.exports = {
     // 如果不传参数，会有一个默认的模板文件
     // 具体参考 https://github.com/jantimon/html-webpack-plugin
     new HtmlWebpackPlugin({
-      template: './index.html'
+      template: './index.html'  
     })
   ]
 }
