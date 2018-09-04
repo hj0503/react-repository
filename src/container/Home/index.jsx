@@ -8,16 +8,15 @@ export default class index extends Component {
   render() {
     return (
       <Router>
-      <div>
-        
-        <Link to="/">to home</Link>
-        <Link to="/list">to list</Link>
-        <Link to="/detail">to detail</Link>
-        <p>Header</p>
-        <Route path="/list" component={ List } />
-        <Route path="/detail" component={ Detail } />
-        <p>Footer</p>
-      </div>
+        <div>  
+          <Link to="/">to home</Link>
+          <Link to="/list">to list</Link>
+          <Link to="/detail">to detail</Link>
+          <p>Header</p>
+          <Route path="/list" component={ List } />
+          <Route path="/detail" component={ Detail } />
+          <p>Footer</p>
+        </div>
       </Router>
     )
   }
