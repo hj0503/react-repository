@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import { render } from 'react-dom'
 import { hashHistory } from 'react-router'
 import RouteMap from './router/RouteMap'
-import Home from './container/Home'
+import Router from '../src/router/RouteMap'
 
 
 
 render(
-    <Home />,
+    <Router />,
     document.getElementById('app')
 );
