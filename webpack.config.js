@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   // 让 webpack 知道以哪个模块为入口，做依赖收集
   // 具体参考 https://webpack.js.org/concepts/#entry
-  entry: './src/index.jsx',
+  entry: './src/index.ts',
   // 告诉 webpack 打包好的文件存放在哪里，以及怎么命名
   // 具体参考 https://webpack.js.org/concepts/#output
   output: {
@@ -11,14 +11,14 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.tsx', '.ts', '.js', '.jsx', '.json' ]
   },
   module: {
     // 使用 babel-loader 编译 es6/7/8 和 jsx 语法
     // 注意：这里没有配置 preset，而是在 .babelrc 文件里面配置
     rules: [
       {
-        test: /\.(js|jsx)?$/,
+        test: /\.(js|jsx|tsx)?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
@@ -27,8 +27,17 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
-      }
+      },
+      // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
+      { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+
+      // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
     ]
+  },
+  externals: {
+    "react": "React",
+    "react-dom": "ReactDOM"
   },
   plugins: [
     // 这里我们通常想要指定自己的 html 文件模板，也可以指定生成的 html 的文件名

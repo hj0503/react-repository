@@ -10,6 +10,9 @@
   "author": "devin.huang",
   "license": "ISC",
   "dependencies": {
+    "@types/react": "^16.4.13",
+    "@types/react-dom": "^16.0.7",
+    "@types/react-router-dom": "^4.3.0",
     "antd-mobile": "^2.2.3",
     "antd-mobile-demo-data": "^0.2.0",
     "css-loader": "^1.0.0",
@@ -34,6 +37,7 @@
     "babel-preset-react": "^6.24.1",
     "html-webpack-plugin": "^3.2.0",
     "source-map-loader": "^0.2.4",
+    "ts-loader": "^5.0.0",
     "typescript": "^3.0.3",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0",

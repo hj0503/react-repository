@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 
-class index extends Component {
+class index extends React.Component {
   render() {
     return (
       <div>
-        city
+        user
       </div>
     );
   }

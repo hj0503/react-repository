@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 import { Router, HashRouter , Route, Link, Switch } from 'react-router-dom'
 
 import App from '../container/App'
@@ -9,11 +9,11 @@ import Search from '../container/Search'
 import Detail from '../container/Detail'
 import NotFound from '../container/NotFound'
 
-export default class RouteMap extends Component {
+export default class RouteMap extends React.Component<any> {
 
   render() {
     return (
-      <HashRouter history={ this.props.history }>
+      <HashRouter>
         <Switch>
           <Route exact path="/" component={ Home } />
           <Route path="/city" component={ City } />
